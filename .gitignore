@@ -1,0 +1,9 @@
+# Business plan stays local (owner decision, 2026-11-10)
+DOCUMENTO-DO-PROJETO.md
+
+# Secrets and local files
+.env
+.env.*
+node_modules/
+.DS_Store
+Thumbs.db

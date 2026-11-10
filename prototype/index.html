@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vitrine de Ibirá</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/styles_base.css">
+<link rel="stylesheet" href="styles/styles_screens.css">
+</head>
+<body>
+<div class="page-backdrop">
+  <div class="phone-shell">
+    <div class="phone-screen">
+      <main id="screen-root" aria-live="polite"></main>
+      <nav class="bottom-navigation" aria-label="Navegação principal">
+        <a class="nav-tab" data-route-name="home" href="#/">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V20h13v-9.5"/></svg>
+          Início
+        </a>
+        <a class="nav-tab" data-route-name="search" href="#/buscar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+          Buscar
+        </a>
+        <a class="nav-tab" data-route-name="pharmacy" href="#/farmacias">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="M12 8v8M8 12h8"/></svg>
+          Plantão
+        </a>
+        <a class="nav-tab" data-route-name="cart" href="#/carrinho">
+          <span class="nav-cart-badge" id="nav-cart-badge" aria-hidden="true"></span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l-1.2 12.2a1.8 1.8 0 0 1-1.8 1.6H8a1.8 1.8 0 0 1-1.8-1.6Z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg>
+          Carrinho
+        </a>
+      </nav>
+    </div>
+  </div>
+  <p class="backdrop-caption">Protótipo de demonstração — comércios, preços e telefones fictícios. Abra no celular para a experiência completa.</p>
+</div>
+<div class="toast-message" id="toast-message" role="status"></div>
+
+<script src="data/demo_city_data.js"></script>
+<script src="data/demo_food_businesses_data.js"></script>
+<script src="data/demo_pharmacy_data.js"></script>
+<script src="src/business_hours_logic.js"></script>
+<script src="src/pharmacy_duty_logic.js"></script>
+<script src="src/cart_logic.js"></script>
+<script src="src/order_whatsapp_message_logic.js"></script>
+<script src="src/price_comparison_logic.js"></script>
+<script src="src/cart_state.js"></script>
+<script src="src/screen_home.js"></script>
+<script src="src/screen_category_and_search.js"></script>
+<script src="src/screen_business_page.js"></script>
+<script src="src/screen_cart_checkout.js"></script>
+<script src="src/screen_pharmacy_duty.js"></script>
+<script src="src/app_router.js"></script>
+</body>
+</html>

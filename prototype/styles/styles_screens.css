@@ -1,0 +1,114 @@
+/* Per-screen styles. */
+
+/* Home: awning header */
+.home-awning {
+  background: var(--awning); color: #fff; padding: 20px 16px 22px;
+  border-bottom: 4px solid var(--sun); position: relative;
+}
+.home-awning::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -13px; height: 13px;
+  background-image: radial-gradient(circle at 50% 0, var(--sun) 11px, transparent 12px);
+  background-size: 26px 13px; background-repeat: repeat-x;
+}
+.home-city-name { font-size: 26px; font-weight: 800; letter-spacing: -0.3px; }
+.home-awning-subtitle { font-size: 13px; opacity: 0.85; margin-top: 3px; }
+.home-content { padding-top: 14px; }
+
+/* Duty banner */
+.duty-banner {
+  display: block; margin: 16px 16px 0; background: var(--card);
+  border: 1px solid var(--line); border-left: 5px solid var(--duty-red);
+  border-radius: var(--radius-card); padding: 12px 14px;
+}
+.duty-banner-label { color: var(--duty-red); font-weight: 700; font-size: 13px; }
+.duty-banner-name { font-family: var(--font-display); font-size: 18px; font-weight: 700; margin-top: 2px; }
+.duty-banner-address { font-size: 13px; color: var(--ink-soft); margin-top: 2px; }
+
+/* Category grid */
+.category-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 0 16px; }
+.category-tile {
+  border-radius: var(--radius-card); padding: 14px; display: flex; align-items: center; gap: 10px;
+  border: 1px solid var(--line); background: var(--card); font-weight: 600; font-size: 14px;
+}
+.category-tile .category-tile-emoji { font-size: 26px; }
+.category-tile.tile-lanchonetes { background: var(--tile-snack-bg); border-color: var(--tile-snack-line); }
+.category-tile.tile-comida-caseira { background: var(--tile-homemade-bg); border-color: var(--tile-homemade-line); }
+.category-tile.tile-sorveterias { background: var(--tile-icecream-bg); border-color: var(--tile-icecream-line); }
+.category-tile.tile-farmacias { background: var(--tile-pharmacy-bg); border-color: var(--tile-pharmacy-line); }
+
+/* Horizontal rail */
+.open-now-rail { display: flex; gap: 10px; overflow-x: auto; padding: 2px 16px 6px; scrollbar-width: none; }
+.open-now-card {
+  flex: 0 0 140px; background: var(--card); border: 1px solid var(--line);
+  border-radius: var(--radius-card); padding: 10px; font-size: 13px;
+}
+.open-now-card .open-now-emoji { font-size: 24px; }
+.open-now-card .open-now-name { font-weight: 700; margin-top: 4px; }
+.open-now-card .open-now-meta { color: var(--ink-soft); font-size: 12px; margin-top: 2px; }
+
+/* Business list rows */
+.business-list { margin: 0 16px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-card); overflow: hidden; }
+.business-row { display: flex; gap: 12px; align-items: center; padding: 12px 14px; }
+.business-row + .business-row { border-top: 1px solid var(--line); }
+.business-row-emoji { width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 26px; flex: none; }
+.business-row-name { font-weight: 700; font-size: 15px; font-family: var(--font-display); }
+.business-row-meta { font-size: 12px; color: var(--ink-soft); margin-top: 2px; }
+
+/* Business page */
+.business-cover { height: 130px; display: flex; align-items: center; justify-content: center; font-size: 54px; position: relative; }
+.business-cover .back-button { position: absolute; top: 14px; left: 14px; }
+.business-head { padding: 14px 16px 4px; }
+.business-head-meta { font-size: 13px; color: var(--ink-soft); margin-top: 6px; line-height: 1.6; }
+.payment-chip-row { display: flex; flex-wrap: wrap; gap: 6px; padding: 8px 16px 0; }
+.payment-chip { font-size: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; color: var(--ink-soft); }
+.closed-notice { margin: 12px 16px 0; background: var(--notice-bg); border: 1px solid var(--notice-line); border-radius: 10px; padding: 10px 12px; font-size: 13px; color: var(--ink-soft); }
+
+.menu-product-row { display: flex; gap: 12px; width: 100%; text-align: left; background: var(--card); border: 0; padding: 12px 14px; align-items: flex-start; font-size: 14px; color: var(--ink); }
+.menu-product-row + .menu-product-row { border-top: 1px solid var(--line); }
+.menu-product-emoji { width: 46px; height: 46px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px; flex: none; }
+.menu-product-name { font-weight: 700; }
+.menu-product-description { color: var(--ink-soft); font-size: 12.5px; margin-top: 2px; }
+.menu-product-price { font-weight: 700; margin-top: 4px; }
+.menu-product-row.product-sold-out { opacity: 0.55; }
+
+/* Pharmacy price list */
+.pharmacy-price-row { display: flex; justify-content: space-between; gap: 10px; padding: 11px 14px; font-size: 14px; align-items: baseline; }
+.pharmacy-price-row + .pharmacy-price-row { border-top: 1px solid var(--line); }
+.price-updated-note { font-size: 11px; color: var(--ink-soft); }
+
+/* Bottom sheet */
+.sheet-overlay { position: fixed; inset: 0; background: rgba(28, 24, 18, 0.45); display: flex; align-items: flex-end; justify-content: center; z-index: 50; }
+.product-sheet { width: 100%; max-width: 414px; background: var(--paper); border-radius: 20px 20px 0 0; padding: 18px 16px 20px; max-height: 80vh; overflow-y: auto; }
+.sheet-title { font-size: 19px; font-weight: 700; font-family: var(--font-display); }
+.addon-option { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+.addon-option input { width: 18px; height: 18px; accent-color: var(--awning); }
+.quantity-stepper { display: inline-flex; align-items: center; gap: 14px; border: 1px solid var(--line); border-radius: 10px; padding: 6px 10px; background: var(--card); }
+.quantity-stepper button { border: 0; background: none; font-size: 20px; width: 28px; color: var(--awning); font-weight: 700; }
+
+/* Cart */
+.cart-item-row { padding: 12px 14px; }
+.cart-item-row + .cart-item-row { border-top: 1px solid var(--line); }
+.cart-item-top { display: flex; justify-content: space-between; gap: 10px; font-size: 14px; }
+.segmented-control { display: flex; margin: 0 16px 14px; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.segmented-control button { flex: 1; padding: 10px; border: 0; background: var(--card); font-size: 14px; font-weight: 600; color: var(--ink-soft); }
+.segmented-control button.segment-active { background: var(--awning); color: #fff; }
+.totals-box { margin: 0 16px; padding: 12px 14px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-card); font-size: 14px; }
+.totals-line { display: flex; justify-content: space-between; padding: 3px 0; }
+.totals-line.totals-grand { font-weight: 800; font-size: 16px; font-family: var(--font-display); }
+
+/* WhatsApp message preview */
+.whatsapp-preview-backdrop { background: var(--wa-backdrop); margin: 14px 16px; border-radius: var(--radius-card); padding: 16px 12px; }
+.whatsapp-bubble { background: #E1F7D4; color: #26221B; border-radius: 10px; padding: 12px 14px; font-size: 13.5px; line-height: 1.55; white-space: pre-wrap; box-shadow: 0 1px 1px rgba(0,0,0,0.12); }
+
+/* Duty screen */
+.duty-today-card { margin: 0 16px; background: var(--card); border: 1px solid var(--line); border-left: 5px solid var(--duty-red); border-radius: var(--radius-card); padding: 16px; }
+.duty-week-row { display: flex; justify-content: space-between; gap: 10px; padding: 11px 14px; font-size: 14px; }
+.duty-week-row strong { text-align: right; }
+.duty-week-row + .duty-week-row { border-top: 1px solid var(--line); }
+
+/* Search */
+.search-input-wrap { padding: 4px 16px 10px; }
+.empty-state { margin: 26px 16px; text-align: center; color: var(--ink-soft); font-size: 14px; line-height: 1.6; }
+.empty-state .empty-state-emoji { font-size: 34px; }
+
+.demo-footer-note { padding: 26px 16px 20px; text-align: center; font-size: 12px; color: var(--ink-soft); }
